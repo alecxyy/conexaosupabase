@@ -9,6 +9,7 @@ function Empresas() {
 
     const [exibeFuncionarios, alteraExibeFuncionarios] = useState(false)
     const [exibeEmpresas, alteraExibeEmpresas] = useState(true)
+    const [exibeModal, alteraExibeModal] = useState(false)
 
     async function captarEmpresas() {
 
@@ -52,6 +53,23 @@ function Empresas() {
     }, [])
     return (
          <div>
+
+            <div className="fundoPreto">
+
+            </div>
+            <div className="modal">
+                <h2>Novo Funcionário</h2>
+                <input placeholder="Nome..."/>
+                <br/>
+                <input placeholder="Contato..."/>
+                <br/>
+                <select>
+                    <option value="1"> Funcionário comum</option>
+                    <option value="0"> Administrador</option>
+                </select>
+                <br/>
+                <button>Salvar</button>
+            </div>
 
             {
                 exibeEmpresas == true ?
